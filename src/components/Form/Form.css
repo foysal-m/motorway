@@ -1,0 +1,65 @@
+form {
+  width: 70%;
+  border: 1px solid #dfdfdf;
+  font-family: NewTransportSemi, Helvetica, Arial, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  max-width: 500px;
+  color: #1d1d1b;
+}
+
+button {
+  background: #0460cc !important;
+  width: 70%;
+  height: 2rem;
+  color: #fff;
+}
+p {
+  color: red;
+  height: 1rem;
+  filter: brightness(80%);
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 6rem;
+}
+.field > input {
+  height: 2rem;
+}
+.salary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 4rem;
+}
+.salary > input {
+  width: 100%;
+  height: 2rem;
+}
+.salary > p {
+  width: 15%;
+  margin-top: 0.5rem;
+  color: #00bc80;
+  letter-spacing: -1px;
+}
+.salaryError {
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  form {
+    width: 100%;
+  }
+  .salary > p {
+    letter-spacing: normal;
+    width: 30%;
+  }
+}

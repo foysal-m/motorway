@@ -1,0 +1,93 @@
+.app {
+  background-color: #fef200;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  width: 100%;
+  height: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  animation: blink normal 15s infinite ease-in-out;
+}
+
+.mainImg:hover {
+  border-radius: 0%;
+  filter: brightness(150%);
+}
+@media screen and (max-width: 700px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .app {
+    display: flex;
+    flex-direction: row;
+  }
+  .mainContainer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(20rem, 1fr));
+    width: 100%;
+    height: 100vh;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .imgContainer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@keyframes blink {
+  70% {
+    opacity: 200%;
+    border-radius: 50%;
+    filter: brightness(150%);
+  }
+}
+
+.modal-image {
+  filter: grayscale(100%);
+  grid-column-end: span 2;
+  position: relative;
+  width: 200px;
+  padding: 5px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.modal-image:hover {
+  border-radius: 0%;
+  filter: brightness(150%);
+}
