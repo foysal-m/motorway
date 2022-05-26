@@ -9,3 +9,13 @@ export const GetImagesAPI = () => {
       console.error("Error:", error);
     });
 };
+
+export const PostFormData = (body) => {
+  return fetch("db", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+};

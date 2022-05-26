@@ -77,7 +77,19 @@ function Form() {
         )}
       </div>
 
-      <button>Submit</button>
+      <button
+        disabled={
+          !formValues[
+            "name" ||
+              "email" ||
+              "date_of_birth" ||
+              "favourite_colour" ||
+              "salary"
+          ]
+        }
+      >
+        Submit
+      </button>
     </form>
   );
 }

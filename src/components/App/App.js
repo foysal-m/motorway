@@ -31,7 +31,10 @@ const App = () => {
                 <ModalImage //ModalImage to review full size images
                   small={`${img.url}.jpg`}
                   large={`${img.url}.jpg`}
-                  alt={img.alt_description}
+                  alt={
+                    img.alt_description.charAt(0).toUpperCase() +
+                    img.alt_description.slice(1)
+                  }
                   hideDownload={true}
                   hideZoom={true}
                   className="modal-image"

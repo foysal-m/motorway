@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PostFormData } from "../apiService";
 import validate from "../validateInfo";
 
 function useForm() {
@@ -21,6 +22,8 @@ function useForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    PostFormData(formValues);
+    setFormValues(initialValues);
     setIsSubmit(true);
   };
 
